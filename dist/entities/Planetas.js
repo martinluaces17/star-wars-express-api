@@ -24,48 +24,53 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 exports.__esModule = true;
-exports.User = void 0;
+exports.Planetas = void 0;
 var typeorm_1 = require("typeorm");
 var Personajes_1 = require("./Personajes");
-var Planetas_1 = require("./Planetas");
-var User = /** @class */ (function (_super) {
-    __extends(User, _super);
-    function User() {
+var Planetas = /** @class */ (function (_super) {
+    __extends(Planetas, _super);
+    function Planetas() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     __decorate([
         typeorm_1.PrimaryGeneratedColumn(),
         __metadata("design:type", Number)
-    ], User.prototype, "id");
+    ], Planetas.prototype, "id");
     __decorate([
         typeorm_1.Column(),
         __metadata("design:type", String)
-    ], User.prototype, "first_name");
+    ], Planetas.prototype, "nombre");
     __decorate([
         typeorm_1.Column(),
         __metadata("design:type", String)
-    ], User.prototype, "last_name");
+    ], Planetas.prototype, "diametro");
     __decorate([
-        typeorm_1.Column({ unique: true }),
+        typeorm_1.Column(),
         __metadata("design:type", String)
-    ], User.prototype, "email");
+    ], Planetas.prototype, "periodo_de_rotacion");
     __decorate([
-        typeorm_1.Column({ unique: true }),
+        typeorm_1.Column(),
         __metadata("design:type", String)
-    ], User.prototype, "password");
+    ], Planetas.prototype, "gravedad");
     __decorate([
-        typeorm_1.ManyToMany(function () { return Personajes_1.Personajes; }),
-        typeorm_1.JoinTable(),
-        __metadata("design:type", Array)
-    ], User.prototype, "Personajes");
+        typeorm_1.Column(),
+        __metadata("design:type", String)
+    ], Planetas.prototype, "poblacion");
     __decorate([
-        typeorm_1.ManyToMany(function () { return Planetas_1.Planetas; }),
-        typeorm_1.JoinTable(),
-        __metadata("design:type", Array)
-    ], User.prototype, "Planetas");
-    User = __decorate([
+        typeorm_1.Column(),
+        __metadata("design:type", String)
+    ], Planetas.prototype, "terreno");
+    __decorate([
+        typeorm_1.Column(),
+        __metadata("design:type", String)
+    ], Planetas.prototype, "img_url");
+    __decorate([
+        typeorm_1.OneToMany(function () { return Personajes_1.Personajes; }, function (personajes) { return personajes.planetas; }),
+        __metadata("design:type", Personajes_1.Personajes)
+    ], Planetas.prototype, "personajes");
+    Planetas = __decorate([
         typeorm_1.Entity()
-    ], User);
-    return User;
+    ], Planetas);
+    return Planetas;
 }(typeorm_1.BaseEntity));
-exports.User = User;
+exports.Planetas = Planetas;
