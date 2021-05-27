@@ -11,16 +11,16 @@ export class Planetas extends BaseEntity {
     nombre: string
 
     @Column()
-    diametro: string;
+    diametro: number;
 
     @Column()
-    periodo_de_rotacion: string;
+    periodo_de_rotacion: number;
 
     @Column()
     gravedad: string;
 
     @Column()
-    poblacion: string;
+    poblacion: number;
 
     @Column()
     terreno: string;

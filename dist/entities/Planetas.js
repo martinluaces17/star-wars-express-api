@@ -42,11 +42,11 @@ var Planetas = /** @class */ (function (_super) {
     ], Planetas.prototype, "nombre");
     __decorate([
         typeorm_1.Column(),
-        __metadata("design:type", String)
+        __metadata("design:type", Number)
     ], Planetas.prototype, "diametro");
     __decorate([
         typeorm_1.Column(),
-        __metadata("design:type", String)
+        __metadata("design:type", Number)
     ], Planetas.prototype, "periodo_de_rotacion");
     __decorate([
         typeorm_1.Column(),
@@ -54,7 +54,7 @@ var Planetas = /** @class */ (function (_super) {
     ], Planetas.prototype, "gravedad");
     __decorate([
         typeorm_1.Column(),
-        __metadata("design:type", String)
+        __metadata("design:type", Number)
     ], Planetas.prototype, "poblacion");
     __decorate([
         typeorm_1.Column(),
