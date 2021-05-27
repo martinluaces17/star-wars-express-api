@@ -29,7 +29,7 @@ var jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 var actions_1 = require("./actions");
 var router = express_1.Router();
 var verifyToken = function (req, res, next) {
-    var token = req.header('Autorización');
+    var token = req.header('Authorization');
     if (!token)
         return res.status(400).json('ACCESO DENEGADO');
     var decoded = jsonwebtoken_1["default"].verify(token, process.env.JWT_KEY);

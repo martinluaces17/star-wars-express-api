@@ -57,8 +57,7 @@ var createUser = function (req, res) { return __awaiter(void 0, void 0, void 0, 
         switch (_a.label) {
             case 0:
                 // important validations to avoid ambiguos errors, the client needs to understand what went wrong
-                if (!req.body.user_name)
-                    throw new utils_1.Exception("Please provide a user_name");
+                // if (!req.body.user_name) throw new Exception("Please provide a user_name")
                 if (!req.body.first_name)
                     throw new utils_1.Exception("Please provide a first_name");
                 if (!req.body.last_name)
